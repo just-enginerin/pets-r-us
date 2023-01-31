@@ -1,0 +1,98 @@
+<!-- 
+============================================
+Title: index.ejs
+Author: Erin Brady
+Date: 29 January 2023
+Description: Express.js Output for Pets-R-Us Landing Page
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/site.css">
+    <link rel="stylesheet" href="/styles/landing.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="/" class="nav-link" id="logo">Pets-R-Us</a>
+        <div id="nav-links">
+            <a href="/grooming" class="nav-link">Grooming</a>
+        </div>
+    </nav>
+
+    <section class="banner" id="landing-banner">
+        <div id="pets-intro-container">
+            <h2>Pets-R-Us</h2>
+            <h3>Home of the Happiest Pets</h3>
+            <p>Pets-R-Us has been upholding the highest standards of excellence in caring for your pet. Our knowledgeable training and daycare staff have over 30 years of combined experience in professional grooming, training, behavioral and basic dog medical care.</p>
+            <button id="btnBookAppt">Book An Appointment</button>
+        </div>
+        <img src="/images/blue-pup.png" alt="A french bulldog wearing a yellow hoodie with its eyes closed.">
+    </section>
+
+    <section>
+        <h2>Locations</h2>
+        <ul>
+            <li>Upper East Side</li>
+            <li>Midtown</li>
+            <li>West Village</li>
+            <li>Downtown Brooklyn</li>
+            <li>Bushwick</li>
+            <li>Astoria</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Location Hours</h2>
+        <ul>
+            <li>Monday - Friday: 8am - 6pm</li>
+            <li>Saturday: 8am - 2pm</li>
+            <li>Sunday: Closed</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Dog of the Week</h2>
+        <p>Meet Buddy! Buddy is new to the Pets-R-Us Pack, but already showing off his leadership skills. At only 8 months old, he has mastered his potty training, as well as both verbal and nonverbal commands for sit, stay, and shake! Way to go, Buddy!</p>
+    </section>
+
+    <section>
+        <h2>Testimonials</h2>
+        <card>
+            <h3>Jane Doe, Mom of Rover</h3>
+            <p>As a new dog mom, I was struggling to give Rover the care he needed. I adopted him from a shelter and even though he had warmed up to me, I hadn't been able to calm his anxiety around other dogs. Once enrolling in Pets-R-Us training classes, he's a whole new dog! With lots of love and practice, he's made a small group of local dog friends that he's comfortable playing with, away from the rowdier dogs at the park. I've been recommending Pets-R-Us to all my friends!</p>
+        </card>
+        <card>
+            <h3>August Johnson, Dad of Checkers</h3>
+            <p>It's so apparent how much everyone here loves animals, which makes us (our pup included) love them! We took our very timid schnoodle puppy here for his first grooming appointment. We were nervous about how he would handle it, and nervous about what he would look like post-grooming. We picked him up and all our fears were allayed. They did a fabulous job on the cut, and our "timid" puppy was ready to move in!</p>
+        </card>
+    </section>
+
+    <section>
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-field">
+                <label for="contactEmail">Your Email:</label>
+                <input as="text" id="contactEmail"/>
+            </div>
+            <div class="form-field">
+                <label for="contactMessage">Message Us:</label>
+                <input as="textarea" id="contactMessage"/>
+            </div>
+            <button id="btnSendMessage">Send Message</button>
+        </form>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "pets-r-us",
+  "version": "1.0.0",
+  "description": "Bellevue Unversity's WEB 340: Node.js \"Pets-R-Us\" Project for Professor Krasso",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/just-enginerin/pets-r-us.git"
+  },
+  "author": "Erin Brady",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "bugs": {
+    "url": "https://github.com/just-enginerin/pets-r-us/issues"
+  },
+  "homepage": "https://github.com/just-enginerin/pets-r-us#readme"
+}

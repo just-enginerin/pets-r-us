@@ -1,0 +1,59 @@
+/* 
+============================================
+Title: landing.css
+Author: Erin Brady
+Date: 29 January 2023
+Description: Styling for Pets-R-Us Landing Page
+============================================
+*/
+
+/* Layout containers */
+
+#landing-banner {
+    background-color: var(--primary-blue);
+    color: white;
+    width: 100vw;
+    height: 60vh;
+    justify-content: space-around;
+}
+
+#pets-intro-container {
+    display: block;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+}
+
+/* Contact Form */
+
+form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    width: 80%;
+}
+
+#contactMessage {
+    height: 300px;
+}
+
+
+/* Buttons */
+
+button {
+    padding: 10px 15px;
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#btnSendMessage {
+    width: 30%;
+    margin: 0 auto;
+}

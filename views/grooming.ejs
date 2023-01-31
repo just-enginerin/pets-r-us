@@ -1,0 +1,72 @@
+<!-- 
+============================================
+Title: grooming.ejs
+Author: Erin Brady
+Date: 29 January 2023
+Description: Express.js Output for Pets-R-Us Grooming Page
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/site.css">
+    <link rel="stylesheet" href="/styles/grooming.css">
+</head>
+<body>
+    <nav>
+        <a href="/" class="nav-link" id="logo">Pets-R-Us</a>
+        <div id="nav-links">
+            <a href="/grooming" class="nav-link">Grooming</a>
+        </div>
+    </nav>
+
+    <main id="grooming-layout">
+            <section id="grooming-info-container">
+                <h2>Grooming Services</h3>
+                <p>At Pets-R-Us, we know that each pet has requires their own individualized service to best meet their needs. That's why in addition to standard grooming services, we offer specialized care packages for your dog's breed, age, conditions, and style!</p>
+            </section>
+            <section id="grooming-services-container">
+                <h2 id="service-list-header">Service List</h2>
+                <div id="standard-services">
+                    <h3>Standard Services</h3>
+                    <ul>
+                        <li>Nail Trimming - $10</li>
+                        <li>Teeth Brushing - $10</li>
+                        <li>Ear Cleaning - $15</li>
+                        <li>Paw Balming - $8</li>
+                        <li>Face and Paw Trim - $15</li>
+                    </ul>
+                </div>
+                <div id="special-services">
+                    <h3>Special Services</h3>
+                    <ul>
+                        <li>Deep Cleansing, Blow Out, Cut and Style - $50</li>
+                        <li>Shed Release - $40</li>
+                        <li>Dry Skin Treatment - $20</li>
+                        <li>Pampered Pup Spa Package: All Grooming Services PLUS a massage and scented spritz! - $160</li>
+                    </ul>
+                </div>
+                <div id="extra-services">
+                    <h3>Treatment Add-ons</h3>
+                    <ul>
+                        <li>Flea Treatment - $20</li>
+                        <li>Skunk Bath - $50</li>
+                        <li>Therapeutic Massage - $30</li>
+                    </ul>
+                </div>
+            </section>
+            <img src="/images/grooming.png" alt="A small fuzzy dog being dried after its bath." id="grooming-img">
+        </aside>
+    </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* 
+============================================
+Title: site.css
+Author: Erin Brady
+Date: 29 January 2023
+Description: Global Styling for Pets-R-Us
+============================================
+*/
+
+/* Universal styles */
+:root {
+    --primary-blue: #017ba9;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: aliceblue;
+}
+
+/* Navbar Styles */
+nav {
+    width: 100vw - 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 50px 8px 10px;
+    align-items: baseline;
+    background-color: var(--primary-blue);
+}
+
+#logo {
+    justify-self: flex-start;
+    font-size: 22px;
+}
+
+.nav-link {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: white;
+}
+
+.nav-link:hover {
+    color: yellow;
+}
+
+/* Banners */
+.banner {
+    width: 90vw;
+    height: 60vh;
+    margin-top: 10px;
+    display: flex;
+}
+
+/* Content sections */
+section {
+    width: 50%;
+    margin: 0 auto 50px;
+    text-align: center;
+    box-shadow: 0 5px 10px lightgray;
+    padding: 10px 30px 20px;
+    background-color: white;
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+}
