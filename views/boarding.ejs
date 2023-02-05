@@ -20,20 +20,19 @@ Description: Express.js Output for Pets-R-Us Boarding Page
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="/styles/site.css">
-    <link rel="stylesheet" href="/styles/grooming.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <%- include('./partials/_header.ejs') %>
 
     <!-- Grooming Page Main Content -->
-    <main id="grooming-layout">
-            <section id="grooming-info-container">
+    <main class="layout">
+            <section class="info-container">
                 <h2>Boarding Services</h3>
                 <p>Going on vacation? Why not treat your dog to one as well? Our friendly and attentive team will do everything possible to ensure Pets-R-Us feels like a home away from home for your pup. Whether you need to board your dog for an overnight stay, for the weekend, a holiday or extended care, your dog will spend their days enjoying supervised open play with their new puppy pals and playmates, and their nights enjoying restful sleep.</p>
             </section>
-            <section id="boarding-services-container">
-                <h2 id="service-list-header">Pricing</h2>
+            <section>
+                <h2 class="service-list-header">Pricing</h2>
                     <ul>
                         <li>1 dog up to 5 nights: $40/night</li>
                         <li>1 dog 5 nights or over: $35/night</li>
@@ -43,7 +42,7 @@ Description: Express.js Output for Pets-R-Us Boarding Page
                         <li>3 dogs 5 nights or over: $75/night</li>
                     </ul>
             </section>
-            <img src="/images/boarding.png" alt="A small fuzzy dog being dried after its bath." id="grooming-img">
+            <img src="/images/boarding.png" alt="A small fuzzy dog being dried after its bath." class="service-img">
         </aside>
     </main>
 

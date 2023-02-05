@@ -83,7 +83,17 @@ nav {
     display: flex;
 }
 
-/* Content sections */
+/* Grid layout & Content sections */
+
+.layout {
+    display: grid;
+    grid-template-areas: 
+        "grooming-info img"
+        "grooming-services img";
+    width: 95vw;
+    margin: 20px auto;
+}
+
 section {
     width: 50%;
     margin: 0 auto 50px;
@@ -91,6 +101,39 @@ section {
     box-shadow: 0 5px 10px lightgray;
     padding: 10px 30px 20px;
     background-color: white;
+}
+
+.info-container {
+    grid-area: grooming-info;
+}
+
+.services-container {
+    grid-area: grooming-services;
+    display: grid;
+    grid-template-areas: 
+        "title title title"
+        "standard-services special-services extra-services";
+    grid-template-columns: 28% 44% 28%;
+}
+
+.service-list-header {
+    grid-area: title;
+}
+
+.service-img {
+    grid-area: img;
+}
+
+#standard-services {
+    grid-area: standard-services;
+}
+
+#special-services {
+    grid-area: special-services;
+}
+
+#extra-services {
+    grid-area: extra-services;
 }
 
 /* Lists */
