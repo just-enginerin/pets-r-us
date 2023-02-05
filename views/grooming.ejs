@@ -23,13 +23,10 @@ Description: Express.js Output for Pets-R-Us Grooming Page
     <link rel="stylesheet" href="/styles/grooming.css">
 </head>
 <body>
-    <nav>
-        <a href="/" class="nav-link" id="logo">Pets-R-Us</a>
-        <div id="nav-links">
-            <a href="/grooming" class="nav-link">Grooming</a>
-        </div>
-    </nav>
+    <!-- Navigation Bar -->
+    <%- include('./partials/_header.ejs') %>
 
+    <!-- Grooming Page Main Content -->
     <main id="grooming-layout">
             <section id="grooming-info-container">
                 <h2>Grooming Services</h3>
@@ -68,5 +65,8 @@ Description: Express.js Output for Pets-R-Us Grooming Page
             <img src="/images/grooming.png" alt="A small fuzzy dog being dried after its bath." id="grooming-img">
         </aside>
     </main>
+
+    <!-- Footer -->
+    <%- include('./partials/_footer.ejs') %>
 </body>
 </html>

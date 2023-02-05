@@ -1,0 +1,53 @@
+<!-- 
+============================================
+Title: boarding.ejs
+Author: Erin Brady
+Date: 4 February 2023
+Description: Express.js Output for Pets-R-Us Boarding Page
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/site.css">
+    <link rel="stylesheet" href="/styles/grooming.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <%- include('./partials/_header.ejs') %>
+
+    <!-- Grooming Page Main Content -->
+    <main id="grooming-layout">
+            <section id="grooming-info-container">
+                <h2>Boarding Services</h3>
+                <p>Going on vacation? Why not treat your dog to one as well? Our friendly and attentive team will do everything possible to ensure Pets-R-Us feels like a home away from home for your pup. Whether you need to board your dog for an overnight stay, for the weekend, a holiday or extended care, your dog will spend their days enjoying supervised open play with their new puppy pals and playmates, and their nights enjoying restful sleep.</p>
+            </section>
+            <section id="boarding-services-container">
+                <h2 id="service-list-header">Pricing</h2>
+                    <ul>
+                        <li>1 dog up to 5 nights: $40/night</li>
+                        <li>1 dog 5 nights or over: $35/night</li>
+                        <li>2 dogs up to 5 nights: $65/night</li>
+                        <li>2 dogs 5 nights or over: $60/night</li>
+                        <li>3 dogs up to 5 nights: $90/night</li>
+                        <li>3 dogs 5 nights or over: $75/night</li>
+                    </ul>
+            </section>
+            <img src="/images/boarding.png" alt="A small fuzzy dog being dried after its bath." id="grooming-img">
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <%- include('./partials/_footer.ejs') %>
+</body>
+</html>

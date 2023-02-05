@@ -45,14 +45,6 @@ input {
 
 /* Buttons */
 
-button {
-    padding: 10px 15px;
-    background-color: yellow;
-    color: black;
-    cursor: pointer;
-    border-radius: 50px;
-}
-
 #btnSendMessage {
     width: 30%;
     margin: 0 auto;

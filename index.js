@@ -36,13 +36,26 @@ app.get('/', (req, res) => {
     res.render('index', {
         title: 'Pets-R-Us',
     })
-});
+})
 
 app.get('/grooming', (req, res) => {
     res.render('grooming', {
         title: 'Grooming Services'
     })
 })
+
+app.get('/training', (req, res) => {
+    res.render('training', {
+        title: 'Training Services'
+    })
+})
+
+app.get('/boarding', (req, res) => {
+    res.render('boarding', {
+        title: 'Boarding Services'
+    })
+})
+
 
 /**
  * Starts the server on port 3000.

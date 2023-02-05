@@ -1,0 +1,70 @@
+<!-- 
+============================================
+Title: training.ejs
+Author: Erin Brady
+Date: 4 February 2023
+Description: Express.js Output for Pets-R-Us Training Page
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/site.css">
+    <link rel="stylesheet" href="/styles/grooming.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <%- include('./partials/_header.ejs') %>
+
+    <!-- Grooming Page Main Content -->
+    <main id="grooming-layout">
+            <section id="grooming-info-container">
+                <h2>Training Services</h3>
+                <p>Our training methods have been developed by our highly experienced team over the course of more than 15 years. We do not utilize a one size fits all training approach. Instead, our proprietary training methods are tailored to each individual dog and their owner’s goals.</p>
+                <p>With Pets-R-Us, you gain access to highly experienced professional trainers who use proven methods to deliver the best possible results. All of our trainers are full-time employees who are dedicated to tailoring our programs to both you and your dog’s individual personalities.</p>
+            </section>
+            <section id="grooming-services-container">
+                <h2 id="service-list-header">Price List</h2>
+                <div>
+                    <h3>Tier 1</h3>
+                    <ul>
+                        <li>Puppy life skills - $65</li>
+                        <li>Puppy Basics - $50</li>
+                        <li>Puppy focus and self-control - $35</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Tier 2</h3>
+                    <ul>
+                        <li>Adolescence 101 - $75</li>
+                        <li>Adolescence Leash Walking - $52</li>
+                        <li>Adolescence Manners - $50</li>
+                    </ul>
+                </div>
+                <div id="extra-services">
+                    <h3>Tier 3</h3>
+                    <ul>
+                        <li>Adult 101 - $75</li>
+                        <li>Adult Impulse Control - $35</li>
+                        <li>Adult Manners - $80</li>
+                    </ul>
+                </div>
+            </section>
+            <img src="/images/training.png" alt="A small fuzzy dog being dried after its bath." id="grooming-img">
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <%- include('./partials/_footer.ejs') %>
+</body>
+</html>

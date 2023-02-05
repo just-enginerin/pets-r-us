@@ -25,7 +25,7 @@ nav {
     width: 100vw - 60px;
     display: flex;
     justify-content: space-between;
-    padding: 8px 50px 8px 10px;
+    padding: 8px 150px 8px 20px;
     align-items: baseline;
     background-color: var(--primary-blue);
 }
@@ -33,6 +33,13 @@ nav {
 #logo {
     justify-self: flex-start;
     font-size: 22px;
+}
+
+#nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 20%;
 }
 
 .nav-link {
@@ -45,6 +52,28 @@ nav {
 .nav-link:hover {
     color: yellow;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-blue);
+    color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    color: yellow;
+  }
 
 /* Banners */
 .banner {
@@ -67,4 +96,32 @@ section {
 /* Lists */
 ul {
     list-style-type: none;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    font-size: 14px;
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: yellow;
+    cursor: pointer;
 }
