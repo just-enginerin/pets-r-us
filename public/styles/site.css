@@ -22,12 +22,16 @@ body {
 
 /* Navbar Styles */
 nav {
-    width: 100vw - 60px;
     display: flex;
     justify-content: space-between;
     padding: 8px 150px 8px 20px;
     align-items: baseline;
     background-color: var(--primary-blue);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px 1px white;
 }
 
 #logo {
@@ -39,7 +43,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-    width: 25%;
+    width: 35%;
 }
 
 .nav-link {
@@ -91,7 +95,7 @@ nav {
         "grooming-info img"
         "grooming-services img";
     width: 95vw;
-    margin: 20px auto;
+    margin: 20px auto 0;
 }
 
 section {
@@ -192,6 +196,10 @@ footer {
     font-size: 14px;
     background-color: var(--primary-blue);
     color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer a {
@@ -201,4 +209,21 @@ footer a {
 footer a:hover {
     color: yellow;
     cursor: pointer;
+}
+
+/* Tables */
+table {
+    text-align: left;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+th, td {
+    border: 1px solid gray;
+    padding: 0 30px;
 }

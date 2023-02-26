@@ -1,0 +1,59 @@
+<!-- 
+============================================
+Title: customer-list.ejs
+Author: Erin Brady
+Date: 15 February 2023
+Description: Express.js Output for Pets-R-Us Customer List Page
+============================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/styles/site.css">
+    <link rel="stylesheet" href="/styles/customer-list.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <%- include('./partials/_header.ejs') %>
+
+    <!-- Customers Page Main Content -->
+    <main>
+        <h2>Customer List</h2>
+        <% if(customers.length > 0) { %>
+            <table>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Email</th>
+                </tr>
+                <tbody>
+                <% customers.forEach(customer => { %>
+                <tr>
+                    <td>
+                        <%= customer.customerId %>
+                    </td>
+                    <td>
+                        <%= customer.email %>
+                    </td>
+                </tr>
+                <% }) %>
+                </tbody>
+            </table>
+            <% } else { %>
+                <h3>Customers have not been added to the MongoDB database. Try adding some!</h3>
+            <% } %>
+    </main>
+
+    <!-- Footer -->
+    <%- include('./partials/_footer.ejs') %>
+</body>
+</html>

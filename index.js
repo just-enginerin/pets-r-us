@@ -97,9 +97,21 @@ app.post('/create-customer', (req, res, next) => {
     })
 })
 
+app.get('/customers', (req, res) => {
+    Customer.find({}, (err, customers) => {
+        if(err) {
+            console.log(err)
+            next(err)
+        } else res.render('customer-list.ejs', {
+            title: 'Pets-R-Us: Customer List',
+            customers: customers
+        })
+    })
+})
+
 /**
  * Starts the server on port 3000.
  */
 app.listen(PORT, () => {
-    console.log('Hello World application started and listening on port ' + PORT);
+    console.log('Pets-R-Us application started and listening on port ' + PORT);
 })

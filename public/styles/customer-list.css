@@ -1,0 +1,21 @@
+/* 
+============================================
+Title: customer-list.css
+Author: Erin Brady
+Date: 15 February 2023
+Description: Styling for Pets-R-Us Customers Page
+============================================
+*/
+
+main {
+    margin: 10% auto;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
