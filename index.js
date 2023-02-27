@@ -10,19 +10,21 @@
 "use strict"
 
 // Express, Mongoose and Node.js import statements
-const express = require('express');
-const mongoose = require('mongoose');
-const path = require('path');
+const express = require('express')
+const mongoose = require('mongoose')
+const path = require('path')
+const fs = require('fs')
 
-// import Customer model
+// import models
 const Customer = require('./models/customers')
+const Appointment = require('./models/appointments')
 
 // Express app variable. Provides access to Express's built-in functions/classes.
 // This creates the Express App
 const app = express();
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
@@ -40,7 +42,7 @@ const CONN = 'mongodb+srv://web340_admin:eR1TKnJPnq1aeKfI@bellevueuniversity.nhz
 mongoose.connect(CONN).then(() => {
     console.log('Connection to MongoDB database was successful\n  If you see this message it means you were able to connect to your MongoDB Atlas cluster');
 }).catch(err => {
-    console.log('MongoDB Error: ' + err.message);
+    console.log('MongoDB Error: ' + err.message)
 })
 
 // App routes:
@@ -75,37 +77,90 @@ app.get('/boarding', (req, res) => {
 })
 
 app.post('/create-customer', (req, res, next) => {
-    console.log(req.body);
-    console.log(req.body.customerId);
+    console.log(req.body)
+    console.log(req.body.customerId)
     console.log(req.body.email)
     const newCustomer = new Customer({
         customerId: req.body.customerId,
         email: req.body.email
     })
 
-    console.log(newCustomer);
+    console.log(newCustomer)
 
-    Customer.create(newCustomer, function(err, customer) {
+    Customer.create(newCustomer, function(err) {
         if (err) {
-            console.log(err);
-            next(err);
+            console.log(err)
+            next(err)
         } else {
             res.render('index.ejs', {
                 title: 'Pets-R-Us'
             })
+            console.log("Successfully created a new Customer account!")
         }
     })
 })
 
 app.get('/customers', (req, res) => {
     Customer.find({}, (err, customers) => {
-        if(err) {
+        if (err) {
             console.log(err)
             next(err)
         } else res.render('customer-list.ejs', {
             title: 'Pets-R-Us: Customer List',
             customers: customers
         })
+    })
+})
+
+app.post('/create-appointment', (req, res, next) => {
+
+    const newAppointment = new Appointment({
+        userName: req.body.userName,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        service: req.body.service
+    })
+
+    console.log(newAppointment)
+
+    Appointment.create(newAppointment, function(err) {
+        if (err) {
+            console.log(err)
+            next(err)
+        } else {
+            res.render('appointment-list.ejs', {
+                title: 'Pets-R-Us: My Appointments'
+            })
+            console.log("Successfully created a new appointment!")
+        }
+    })
+})
+
+app.get('/booking', (req, res) => {
+    let jsonFile = fs.readFileSync('./public/data/services.json')
+    let services = JSON.parse(jsonFile)
+
+    console.log(services)
+
+    res.render('booking.ejs', {
+        title: 'Pets-R-Us: Book a New Appointment',
+        services: services
+    })
+})
+
+app.get('/appointments', (req, res) => {
+    Appointment.find({}, (err, appointments) => {
+        if (err) {
+            console.log(err)
+            next(err)
+        } else {
+            console.log(appointments)
+            res.render('appointment-list.ejs', {
+                title: 'Pets-R-Us: My Appointments',
+                appointments: appointments
+            })
+        }
     })
 })
 

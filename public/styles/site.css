@@ -43,7 +43,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-    width: 35%;
+    box-sizing: border-box;
 }
 
 .nav-link {
@@ -51,6 +51,7 @@ nav {
     letter-spacing: 1px;
     font-size: 16px;
     color: white;
+    margin: 0 20px;
 }
 
 .nav-link:hover {
@@ -98,9 +99,9 @@ nav {
     margin: 20px auto 0;
 }
 
-section {
+.card, section {
     width: 50%;
-    margin: 0 auto 50px;
+    margin: 50px auto;
     text-align: center;
     box-shadow: 0 5px 10px lightgray;
     padding: 10px 30px 20px;
@@ -151,8 +152,9 @@ ul {
     grid-template-columns: auto;
 }
 
-.form-field {
+form, .form, .form-field {
     padding: 20px;
+    width: 100%;
 }
 
 .btn {
@@ -166,13 +168,14 @@ ul {
     padding: 15px 32px;
 }
 
-.input {
+.input, input, select {
     padding: 12px 20px;
-    margin: 8px 0;
+    /* margin: 8px 0; */
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    width: 80%;
 }
 
 .full-width {
@@ -186,6 +189,20 @@ button, .btn-primary {
     color: black;
     cursor: pointer;
     border-radius: 50px;
+    border: 2px solid black;
+    transition-duration: 1s;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: white;
+    transition-duration: 1s;
+    text-decoration: underline;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+    transition-duration: 1s;
 }
 
 /* Footer */
