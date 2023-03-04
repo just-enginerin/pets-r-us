@@ -129,8 +129,8 @@ app.post('/create-appointment', (req, res, next) => {
             console.log(err)
             next(err)
         } else {
-            res.render('appointment-list.ejs', {
-                title: 'Pets-R-Us: My Appointments'
+            res.render('index.ejs', {
+                title: 'Pets-R-Us'
             })
             console.log("Successfully created a new appointment!")
         }
