@@ -156,10 +156,21 @@ app.get('/appointments', (req, res) => {
             next(err)
         } else {
             console.log(appointments)
-            res.render('appointment-list.ejs', {
+            res.render('my-appointment.ejs', {
                 title: 'Pets-R-Us: My Appointments',
                 appointments: appointments
             })
+        }
+    })
+})
+
+app.get('/api/appointments/:email', async(req, res, next) => {
+    Appointment.find({'email': req.params.email}, function(err, appointments) {
+        if (err) {
+            console.log(err)
+            next(err)
+        } else {
+            res.json(appointments)
         }
     })
 })
