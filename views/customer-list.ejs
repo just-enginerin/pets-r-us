@@ -28,6 +28,16 @@ Description: Express.js Output for Pets-R-Us Customer List Page
 
     <!-- Customers Page Main Content -->
     <main>
+
+        <select>
+            <% for(let i = 0; i < 2; i++) { %>
+                <option
+                    value='<%= customers[i].customerId %>'>
+                    <%= customers[i].email %>
+                </option>
+            <% } %>
+        </select>
+
         <h2>Customer List</h2>
         <% if(customers.length > 0) { %>
             <table>
